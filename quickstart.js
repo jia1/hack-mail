@@ -7,7 +7,7 @@ var googleAuth = require('google-auth-library');
 
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/gmail-nodejs-quickstart.json
-var SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
+var SCOPES = ['https://mail.google.com/'];
 var TOKEN_DIR = './.credentials/';
 var TOKEN_PATH = TOKEN_DIR + 'gmail-token.json';
 
