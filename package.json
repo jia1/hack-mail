@@ -1,5 +1,5 @@
 {
-  "name": "electron-app",
+  "name": "hack-mail",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -12,6 +12,6 @@
   "scripts": {
     "start": "electron main.js"
   },
-  "author": "",
+  "author": "Lim Jia Yee",
   "license": "ISC"
 }
