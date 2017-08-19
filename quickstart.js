@@ -12,15 +12,17 @@ var TOKEN_DIR = './.credentials/';
 var TOKEN_PATH = TOKEN_DIR + 'gmail-token.json';
 
 // Load client secrets from a local file.
-fs.readFile('client_secret.json', function processClientSecrets(err, content) {
-  if (err) {
-    console.log('Error loading client secret file: ' + err);
-    return;
-  }
-  // Authorize a client with the loaded credentials, then call the
-  // Gmail API.
-  authorize(JSON.parse(content), listLabels);
-});
+function executeApi(operation) {
+  fs.readFile('client_secret.json', function processClientSecrets(err, content) {
+    if (err) {
+      console.log('Error loading client secret file: ' + err);
+      return;
+    }
+    // Authorize a client with the loaded credentials, then call the
+    // Gmail API.
+    authorize(JSON.parse(content), operation);
+  });
+}
 
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
@@ -123,3 +125,5 @@ function listLabels(auth) {
     }
   });
 }
+
+// executeApi(listLabels);
