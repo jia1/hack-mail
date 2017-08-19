@@ -126,4 +126,7 @@ function listLabels(auth) {
   });
 }
 
-// executeApi(listLabels);
+module.exports = {
+  executeApi: executeApi,
+  listLabels: listLabels
+};
