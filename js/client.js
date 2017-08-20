@@ -2,4 +2,4 @@
 // The working directory is thus where the HTML file is
 var Gmail = require('./js/gmail.js');
 
-Gmail.executeApi(Gmail.listLabels);
+Gmail.executeApi(Gmail.listLabels, {selector: '#list-labels'});
